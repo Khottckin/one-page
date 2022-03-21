@@ -1,0 +1,523 @@
+/* --------------- reset.css --------------- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;                         /* обнуляем отступы и убираем бордюры */
+	vertical-align: baseline;           /* приводим все к одной базовой линии */
+	background: transparent;      		/* чтобы не проскакивали левые фоны, установленные по умолчанию */
+	font-size: 100%;                    /* размер шрифта всем одинаковый */
+}
+a {                                     /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+	margin:0;
+	padding:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+	outline:none;
+}
+table {									/* устраняем отступы между ячейками таблицы */
+	border-collapse: collapse; 
+	border-spacing: 0;
+}
+td, td img {
+	vertical-align: top;				/* возвращаем привычное вертикальное выравнивание */
+} 
+input, select, button, textarea {
+	margin: 0; 							/* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+	font-size: 100%; 					/* делаем размер шрифтов везде одинаковым */
+	outline: none;
+}
+input[type="text"], input[type="password"], textarea {
+	padding: 0; 						/* убираем внутренние отступы для текстовых полей */
+}
+input[type="checkbox"] { 				/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+	vertical-align: bottom;
+}
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display:block;
+}
+nav ul {
+	 list-style:none;
+}
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+html {
+	min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+}
+body {
+    font-family: 'Lato', sans-serif;
+	color: #7e7f84;
+	text-align: left;
+	font-size: 1em; /* используем безопасные шрифтовые CSS стеки */
+	min-height:100%;
+}
+a, a:visited { /* порядок правил для ссылок имеет значение */
+	color: #2a2d34;
+	text-decoration: underline;
+}
+a:hover {
+	color: #e18c44;
+	text-decoration:none;
+}
+a:focus, a:active {
+	color: #e18c44;
+	text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight:normal;
+}
+img{
+	max-width:100%;
+}
+.clr{
+	clear:both;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+/* --------------- /базовые настройки ---------*/
+
+.center-main{
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
+header{
+	background:rgba(7, 7, 7, 0.6);
+	position:absolute;
+	z-index:2;
+	width:100%;
+}
+
+.header-top{
+	padding:15px 0 25px 0;
+}
+	.logo{
+		float:left;
+	}
+.menu{
+	float:right;
+	font-family: 'Lato', sans-serif;
+	margin-top:25px;
+}
+		.menu li{
+			float:left;
+			text-transform: uppercase;
+			margin-right: 30px;
+			font-size:0.875em;
+		}
+			.menu li a{
+				color:#ffffff;
+				font-size: 15px;
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+				.menu li a:hover{
+					color:#e18c44;
+				}
+
+	
+.mysl{
+	text-align: center;	
+}
+	.mysl img{
+		border-bottom: 4px solid #e18c44;
+		width:100%;
+		}	
+	.textimg{
+		max-width: 700px;
+		position:absolute;
+		top:35%;
+		left:44%;	
+		text-shadow: #2a2d34 4px 4px 4px;
+		}
+		.textimg p a{
+			color:#ffffff;
+		}
+		.mysl h2{
+			font-size: 48px;
+			margin-bottom: 15px;
+			font-weight: 300;
+			line-height: 1.1;
+			color:#ffffff;	
+			}
+		.mysl p{
+			font-size: 18px;
+			color:#ffffff
+		}
+		.callmain{
+			display: inline-block;
+			padding:20px 50px;
+			border:2px solid #ffffff;
+			border-radius:5px;
+			font-size:20px;
+			text-decoration: none;
+			font-weight: bold;
+			margin-top: 30px;
+		}
+		.callmain:hover{
+			color:#e18c44;
+			border:2px solid #e18c44;
+		}
+	
+.blocknews-section{
+	border-bottom: 1px solid #e7e7e7;
+	padding:30px 0 50px 0;
+}
+	.blocknews-section>h2{
+		font-size: 2.25em;
+		font-weight: bold;
+		text-align: center;
+		color:#2a2d34;
+	}
+	.blocknews-section>h3{
+		font-size: 1.25em;
+		font-weight: 400;
+		text-align: center;
+		color:#2a2d34;
+		margin-bottom: 40px;
+	}
+.blocknews{
+	margin-top:40px;
+}
+	.blocknews article{
+		width:30%;
+		float:left;
+		margin-left:5%;
+		text-align: center;
+	}
+	.blocknews article:first-child{
+		margin-left:0;
+	}
+	.blocknews article img{
+		display:block;
+		margin:0 auto 20px auto;
+	}
+	.blocknews article h2{
+		font-family: 'Robot', sans-serif;
+		font-size:1em;
+		margin-bottom:20px;
+		text-transform: uppercase;
+		font-weight: bold;
+		color:#2a2d34
+	}
+	.blocknews article p{
+		font-family: 'Roboto', sans-serif;
+		line-height: 1.5;
+		font-size:1.1em;
+		margin-bottom:20px;
+	}
+
+.blockproducts {
+	margin-top:40px;
+	border-bottom: 1px solid #e7e7e7;
+	
+}
+	.blockproducts>h2{
+		font-size: 2.25em;
+		font-weight: bold;
+		text-align: center;
+		color:#2a2d34;                            
+	}
+	.blockproducts>h3{
+		font-size: 1.25em;
+		font-weight: 400;
+		text-align: center;
+		color:#2a2d34;
+		margin-bottom: 40px;
+	}
+	.blockproducts a{
+		text-decoration: none;
+	}
+	.blockprod1 {
+		margin-bottom:60px;
+	}
+		.blockprod1 article {
+			width:23%;
+			margin-left:2.66%;
+			float:left;
+		}
+		.blockprod1 article:first-child{
+			margin-left: 0;
+		}
+		.blockprod1 article img{
+			display: block;
+			margin: 0 auto 20px auto;
+		}
+		.blockprod2{
+			padding:20px 20px 0 20px;
+			text-align:center;
+		}
+		.blockprod2 h2{
+			font-family: 'Robot', sans-serif;
+			font-size:1em;
+			margin-bottom:20px;
+			margin-top:-20px;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+		.blockprod2 p{
+			color:#67686d;
+			font-size:1.0em;
+			margin-bottom:15px;
+			line-height: 1.5;
+		}
+
+.about{
+	margin-bottom:60px;
+}
+	.about article{
+		float:right;
+		width: 70%;
+	}
+	.about article h2{
+		font-size:1.25em;
+		font-weight:bold;
+		margin-top: 20px;
+		color:#67686d;
+	}
+	.about article p{
+		font-size:0.875em;
+		margin-top:20px;
+		font-style:italic;
+	}
+	.about-img {
+		float:left;
+		width: 25%;
+		margin-top: 20px;	
+	}
+	.about-img img{
+		border:1px solid #2a2d34;
+	}
+.contact-map{
+	position:relative;
+	height:600px;
+}
+	.contatc-block{
+		position: absolute;
+		bottom:200px;
+		width:320px; 
+		left:50%;
+		margin-left:-160px;
+		background:rgba(226, 142, 33, 0.863);
+		border-radius: 5px;
+		padding:30px 30px 10px 30px;
+		box-sizing: border-box;
+	}
+	.contatc-block h2{
+		color:#ffffff;
+		font-size:2.25em;
+		text-align:center;
+		margin-bottom:20px;
+		font-weight: bold;
+	}
+	.footer-email{
+		width:100%;
+		font-size: 0.85em;
+		margin-bottom: 15px;
+		padding:7px 20px;
+		box-sizing: border-box;
+		border:none;
+		border-radius: 5px;
+		text-align:center;
+	}
+	.footer-text{
+		width:100%;	
+		font-size: 0.85em;
+		margin-bottom: 15px;
+		padding:7px 20px;
+		box-sizing: border-box;
+		border:none;
+		border-radius: 5px;
+		text-align:center;
+	}
+	.footer-sumbit{
+		font-size: 12px;
+		border:none;
+		background-color: #414042;
+		padding:10px 4px;
+		color:#e18c44;
+		cursor:pointer; 
+		border-radius: 5px;
+		display: block;
+		margin:0 auto;
+	}
+.footer{
+	background:#2a2d34;
+	padding:40px 0;
+}
+	
+/* -----------------------------------------------------------------------------------Медиазапросы-----------------------------------------------------------------------------------*/
+
+@media screen and (max-width:900px) {
+	.slider h2{
+		top:70px;
+		font-size: 2em;
+	}
+	.slider p{
+		top:110px;
+	}
+	.blockprod1 article {
+		width:45%;
+		margin:0 2.5% 30px 2.5%;
+		float:left;
+	}
+	.blockprod1 article:first-child{
+		margin:0 2.5% 30px 2.5%;
+	}
+	.subscribe h2{
+		float:none;
+		text-align: center;
+		margin-bottom: 20px;;
+	}
+	.subscribe-button{
+		float:none;
+		display:table;
+		margin: 0 auto;
+	}
+}
+@media screen and (max-width:740px){
+	.slider h2{
+		top:60px;
+		font-size: 2em;
+	}
+	.slider p{
+		top:100px;
+	}
+	.search{
+		border-top:1px solid #eeeeee;
+		border-bottom:1px solid #eeeeee;
+		margin-top:10px;
+		padding:5px 0 7px 0;
+		
+	}
+}
+@media screen and (max-width:600px){
+	.slider h2{
+		top:60px;
+		font-size: 2em;
+	}
+	.slider p{
+		top:100px;
+	}
+	.blocknews article{
+		width:95%;
+		float:none;
+		margin:0 2.5% 30px 2.5%;
+	}
+	
+	.blocknews article:first-child{
+		margin:0 2.5% 30px 2.5%;
+	}
+	.blocknews article h2{
+
+		margin-bottom:20px;
+	}
+	.blocknews article p{
+	
+		margin-bottom:20px;
+	}
+	.about article{
+		float:none;
+		width:95%;
+	
+	}
+	.map {
+		float:none;
+		width:95%;
+		margin:0 2.5% 30px 2.5%;
+	
+	}
+}
+@media screen and (max-width:480px){
+	.slider h2{
+		top:60px;
+		font-size: 2em;
+	}
+	.slider p{
+		top:100px;
+		font-size: 0.9em;
+	}
+	.slide-viewer {
+		height: 250px;
+	}
+	.blockprod1 article {
+		width:95%;
+		margin:0 2.5% 30px 2.5%;
+		float:none;
+		overflow: hidden;
+	}
+	.blockprod1 article:first-child{
+		margin:0 2.5% 30px 2.5%;
+	}
+}
+@media screen and (max-width:410px){
+	.logo{
+		float:none;
+		text-align: center;
+		margin-bottom:10px;
+	}
+	.header-top{
+		padding:10px 0;
+	
+	}
+	.contact-header{
+		float:none;
+		display:table;
+		margin:0 auto;
+	}
+	.slider h2{
+		top:60px;
+		font-size: 2em;
+	}
+	.slider p{
+		top:100px;
+		font-size: 0.9em;
+	}
+	.slide-viewer {
+		height: 250px;
+	}
+}
+@media screen and (max-width:360px){
+	.slider h2{
+		top:60px;
+		font-size: 2em;
+	}
+	.slider p{
+		top:100px;
+		font-size: 0.9em;
+	}
+	.slide-viewer {
+		height: 250px;
+	}
+	.email-inpt{
+		float:none;
+		width: 95%;
+		margin:0 2.5% 30px 2.5%;
+		padding:7px 20px;
+		
+	}
+	.submit-inpt{
+		float:none;
+		width: 95%;
+		margin:0 2.5% 30px 2.5%;
+		padding:7px 20px;
+		cursor:pointer;
+		font-size:0.875em;
+	}
+}
